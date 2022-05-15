@@ -5,5 +5,5 @@
  */
 const getRawStory = () => {
   return fetch('./story.txt')
-    .then(response => response.text());
+    .then(response => response.text())
 };
