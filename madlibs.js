@@ -93,8 +93,8 @@ let index = 0
 for (el of ObjsList) {
   
   if (el.pos) {
-    editSection.innerHTML += `<input type="text" class="editableFields" id=${index} name="editPane" size= '5' style= "padding:5px;margin:5px;" placeholder="${el.pos}" </input>`
-    review.innerHTML += `<span id=${index} class="review">${el.pos}</span>`
+    editSection.innerHTML += `<input type="text" class="editableFields" id=${index} name="editPane" size= '2' style= "padding:2px;margin:2px;border-radius:10px;" placeholder="${el.pos}" </input>`
+    review.innerHTML += `<span id=${index} class="review" style="color:red">${el.pos}</span>`
 
     index++}
   else {editSection.innerHTML += `${el.word}`;
@@ -103,7 +103,12 @@ for (el of ObjsList) {
 }
 const editable = document.querySelectorAll(".editableFields");   //Targeting the editable fields
 const reviewPane = document.querySelectorAll(".review");        //Targeting the review fields
-
+const button =document.getElementById("button") //targeting the restart button
+button.addEventListener("click" , (e) => {
+  editable.forEach((field) => {  
+field.value = ""
+})
+})
 editable.forEach((field) => {       // Iterating through the editable fields and updating the review fields.
     const placeholder = field.getAttribute("placeholder");
                                

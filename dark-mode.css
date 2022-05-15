@@ -1,0 +1,49 @@
+
+[data-theme="dark"] {
+    background-color: rgba(17, 17, 17, 0.832) !important;
+    color: rgb(255, 255, 255);
+  }
+
+  [data-theme="dark"] #body{
+    background-color: rgba(17, 17, 17, 0.832) !important;
+    color: rgb(255, 255, 255);
+  }
+
+  
+  [data-theme="dark"] .bg-black {
+    background-color: #fff !important;
+  }
+  
+  [data-theme="dark"] .bg-dark {
+    background-color: #eee !important;
+  }
+  
+  [data-theme="dark"] .bg-light {
+    background-color: #222 !important;
+  }
+  
+  [data-theme="dark"] .bg-white {
+    background-color: #000 !important;
+  }
+
+  [data-theme="dark"] #madLibsEdit {
+    background-color: #000 !important;
+  }
+  [data-theme="dark"] #ssmadLibsPreview {
+    background-color: #000 !important;
+  }
+
+  [data-theme="dark"] #navbar {
+    background-color: #000 !important;
+    color: rgb(255, 255, 255);
+  }
+  [data-theme="dark"] p.link-dark {
+    color: rgb(255, 255, 255)!important;
+  }
+
+ 
+
+
+  
+
+  
