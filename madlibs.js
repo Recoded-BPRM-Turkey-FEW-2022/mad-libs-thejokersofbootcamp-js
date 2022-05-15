@@ -90,6 +90,7 @@ for (let i = 0; i < parsedStory.length; i++) {
 
 // A loop to dispaly the list of objects in the editSection......As simple as it should be.
 let index = 0
+let placeholder0 = ''
 for (el of ObjsList) {
   
   if (el.pos) {
@@ -106,12 +107,14 @@ const reviewPane = document.querySelectorAll(".review");        //Targeting the 
 const button =document.getElementById("button") //targeting the restart button
 button.addEventListener("click" , (e) => {
   editable.forEach((field) => {  
+    reviewPane[`${field.getAttribute("id")}`].innerText = placeholder0
 field.value = ""
+
 })
 })
 editable.forEach((field) => {       // Iterating through the editable fields and updating the review fields.
-    const placeholder = field.getAttribute("placeholder");
-                               
+    let placeholder = field.getAttribute("placeholder");
+    placeholder0 = placeholder                          
   field.addEventListener("keyup", (e) => {
     if (field.value.length > 0) {
       reviewPane[`${field.getAttribute("id")}`].innerText = `${field.value} ` 

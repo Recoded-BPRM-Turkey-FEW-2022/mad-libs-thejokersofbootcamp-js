@@ -5,13 +5,16 @@
   }
 
   [data-theme="dark"] #body{
-    background-color: rgba(17, 17, 17, 0.832) !important;
-    color: rgb(255, 255, 255);
-  }
+    background: url(/Background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 
   
   [data-theme="dark"] .bg-black {
-    background-color: #fff !important;
+    background-color: rgb(24, 12, 12) !important;
   }
   
   [data-theme="dark"] .bg-dark {
