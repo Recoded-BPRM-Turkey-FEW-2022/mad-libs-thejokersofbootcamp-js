@@ -5,10 +5,8 @@
   }
 
   [data-theme="dark"] #body{
-    background: url(/Background.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: rgba(17, 17, 17, 0.832) !important;
+    color: rgb(255, 255, 255);
 }
 
 
