@@ -28,30 +28,8 @@
 //  */
 
 
-/** 
- * This Funtion does not Work so we need to ask for help from Salah to fix it.
- * Bascially, whenever I try to solve it, it says 'ReferenceError: fetch is not defined' 
- */ 
-//  const getRawStory = () => {
-//  return fetch('story.txt')
-//  .then(response => response.text())
-//  .then(data => console.log(data));
-  
-
-
-// I used a dummy text until we figure out a solution for getRawStory()
-let story = `Hi Amjad[n], I am writing to you, the super hero inside me. I want to know why are you hiding?
-Do not underestimate yourself. You already can speak Japanese[n] fluently. You also can code[v] without asking help from anyone.
-You are smart[a]. You can be a/an great[a] engineer[n] with a little effort. Get out and shine out there!.`
-
-
-// The story is being separated into chunks including special characters such as Commas, Periods, etc.
 const parseStory = (story) => {
-let words = /[a-z\[a-z\]]+|[?,/\.!]+/ig   // It was really a tough task just to figure out how to write this simple line of code but I did it at the end.....Horaaay 😅.
-
-
-// The result of applying the Regexp on the story can be shown by logging this line of code  story.match(words). However, I need to return the Regexp.
-return story.match(words)
+return story 
 }
 
 
@@ -60,8 +38,13 @@ let review = document.getElementById('ssmadLibsPreview')    //  Targeting the Se
 
 
 // This function will display a list of objects as stated above in the instructions.
-const processedStory = () => {
-  const parsedStory = parseStory(story)
+const processedStory = (parsed) => {
+ 
+ // The story is being separated into chunks including special characters such as Commas, Periods, etc.
+  let words = /[a-z\[a-z\]]+|[?,/\.!]+/ig    // It was really a tough task just to figure out how to write this simple line of code but I did it at the end.....Horaaay 😅.
+  const parsedStory = parsed.match(words)   // The result of applying the Regexp on the story
+
+
 ObjsList = []
 for (let i = 0; i < parsedStory.length; i++) {
   if (parsedStory[i].includes("[")) { // Handling the words that will be edited
@@ -139,13 +122,14 @@ editable.forEach((field) => {       // Iterating through the editable fields and
 
 
 
-/**
- * All your other JavaScript code goes here, inside the function. Don't worry about
- * the `then` and `async` syntax for now.
- * 
- * You'll want to use the results of parseStory() to display the story on the page.
- */
-// getRawStory().then(parseStory).then((processedStory) => {
-//   console.log(processedStory);
-// });
-processedStory()
+// /**
+//  * All your other JavaScript code goes here, inside the function. Don't worry about
+//  * the `then` and `async` syntax for now.
+//  * 
+//  * You'll want to use the results of parseStory() to display the story on the page.
+//  */
+// // getRawStory().then(parseStory).then((processedStory) => {
+// //   console.log(processedStory);
+// // });
+// processedStory()
+getRawStory().then(parseStory).then(processedStory)
