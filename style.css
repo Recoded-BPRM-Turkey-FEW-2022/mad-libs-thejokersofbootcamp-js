@@ -10,7 +10,7 @@ h4{
 }
 
 /**
- kemal css part
+ kemal part
  */
 
 #body {
@@ -56,5 +56,41 @@ header {
     padding: 20px 20px 20px 20px;
 }  
 /**
- kemal css part
+ dark mode
  */
+
+[data-theme="dark"] {
+    background: rgba(17, 17, 17, 0.832) !important;
+    background-color: rgba(17, 17, 17, 0.832) !important;
+    color: rgb(255, 255, 255);
+  }
+
+
+
+[data-theme="dark"] #button{
+        background-color: rgba(17, 17, 17, 0.832) !important;
+        color: rgb(255, 255, 255);
+    }
+  
+
+[data-theme="dark"] #navbar {
+        background-color: #000 !important;
+        color: rgb(255, 255, 255)!important;
+    }
+
+[data-theme="dark"] #madLibsEdit {
+    background-color: #000 !important;
+    color: rgb(255, 255, 255)!important;
+  }
+
+[data-theme="dark"] #ssmadLibsPreview {
+    background-color: #000 !important;
+  }
+
+
+  
+
+
+  
+
+  
